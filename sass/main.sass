@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab')
+* 
+	box-sizing: border-box
+
+body
+	width: 100%
+	margin: 0 
+
+.container
+	padding-top: 50px
+	font-family: Raleway
+	
+.row
+	height: 300px
+	font-family: Raleway
+
+
+	h2 
+		font: 38px sans
+		font-size: 38px
+		margin-top: 0
+		text-align: center
+		text-transform: uppercase
+		font-family: 'Roboto Slab'
+		@media (max-width: 1000px)
+			font-size: 32px
+
+	p
+		text-align: center
+		padding: 2% 15%
+		font-size: 22px
+		line-height: 40px
+		@media (max-width: 1000px)
+			font-size: 18px
+			line-height: 32px
+			padding: 50px calc(40% - 250px)
+
+.black
+	
+	h2.background 
+		position: relative
+		z-index: 2
+
+		&:before 
+			border-top: 2px solid white
+			content: ""
+			margin: 0 auto
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			z-index: -1
+
+		span 
+			background-color: #171717
+			color: white
+			padding: 0 20px			
+
+	p
+		color: white
+		@media (max-width: 700px)
+				margin: -5% 5%
+
+.white
+
+	h2.background 
+		position: relative
+		z-index: 1
+
+		&:before 
+			border-top: 2px solid #171717
+			content: ""
+			margin: 0 auto
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			z-index: -1
+
+		span 
+			background-color: white
+			color: black
+			padding: 0 20px
+
+	p
+		color: black
+		@media (max-width: 700px)
+				margin: -5% 5%
+
+header
+	background-image: url(../images/picture1.jpg)
+	background-origin: padding-box
+	background-attachment: fixed
+	background-size: cover
+	background-repeat: no-repeat
+	height: 700px
+	width: 100%
+	z-index: 1001
+	margin: 0 auto
+	font-family: 'Roboto Slab'
+	@media (max-width: 1000px)
+		max-height: 500px
+
+	nav	
+		position: relative
+		max-width: 1440px
+		margin: 0 calc(50% - 470px) 
+		@media (max-width: 1000px)
+			width: 100%
+			max-width: 1000px
+			margin: 0 
+
+		.logo
+			width: 100%
+			height: 100px
+			width: 400px
+			line-height: 100px
+			text-align: left			
+			@media (max-width: 1000px)
+				margin: 0
+				text-align: center
+
+			p
+				color: white
+				font-size: 35px
+
+		.navigation
+			width: 100%
+			
+			ul
+				text-align: center
+				margin: 0
+				padding: 0
+				overflow: hidden
+				@media (max-width: 1000px)
+					text-align: left
+					width: 100%
+					padding: 0
+
+				li
+					display: inline-block
+					width: 184px
+					height: 50px
+					line-height: 50px
+					&:hover 
+						background-color: #6D6D6D
+						color: #FFFBF4
+						transition: .5s
+
+					@media (max-width: 1000px)
+						display: none
+						width: 100%
+						padding: 0 10px
+						font-size: 18px	
+						float: left
+
+					a
+						text-decoration: none
+						color: white
+						font-weight: bold
+
+						@media(max-width: 1000px) 
+							color: #fff				
+
+				.icon
+					display: none
+					font-size: 30px
+					@media (max-width: 1000px)
+						width: 10%
+						text-align: center
+						float: right
+						display: inline-block
+						background-color: #171717
+
+				.home
+					background-color: #171717
+					@media (max-width: 1000px)
+						display: inline-block
+						float: left
+						width: 90%
+
+			.hamburger
+				@media screen and (max-width: 1000px)
+					position: relative
+
+					li
+						float: none
+						display: inline-block
+
+						a
+							display: block
+							text-align: left
+					.icon
+						position: absolute
+						right: 0
+						top: 0
+						a
+							text-align: center
+
+.slogan
+	position: relative
+	width: 940px
+	margin: 200px calc(50% - 470px) 
+	text-align: center
+	line-height: 70px
+	@media (max-width: 1000px)
+		max-width: 500px
+		margin: 0 auto
+		padding-top: 5%
+
+	h1
+		font-size: 45px
+		color: white
+		text-shadow: 2px 2px #171717
+
+.intro
+	background-color: #171717
+
+.features
+	background-color: white
+
+.specialization
+	display: flex
+	flex-direction: row
+	margin: 0 100px
+	@media (max-width: 700px)
+		flex-direction: column
+		text-align: center
+		margin: 0 15%
+
+	.first
+		flex: 1
+		text-align: center
+		width: 150px
+		height: 250px
+		padding-top: 40px
+		@media (max-width: 700px)
+			width: 400px
+			height: 200px
+			padding: 0
+
+		.fa
+			font-size: 60px
+			padding-bottom: 20px
+
+		h3
+			font-size: 22px
+			font-weight: bold
+
+		button
+			border-radius: 20px
+			width: 100px
+			height: 30px
+			margin: 20px
+			background-color: white
+			border: 2px solid black
+			font-weight: bold
+.work
+	@extend header
+	height: 400px
+	background-image: url(../images/work.jpg)
+
+.touch
+	height: 70px
+	
+.address
+	@extend .specialization
+	@media (max-width: 700px)
+		height: 500px
+
+	.data
+		@extend .first
+		height: 100px
+		@media (max-width: 700px)
+			width: 400px
+			height: 200px
+			padding: 0
+
+		.fa
+			font-size: 60px
+			padding: 0
+
+		p
+			padding: 0
+
+.form
+	height: 600px
+	
+	p
+		text-align: center
+		padding: 0
+
+	.form-control
+		width: 100%
+		padding: 2% 35%
+
+		input[type=text]
+			margin-bottom: 10px
+			margin-top: 10px
+			width: 100%
+			padding: 10px
+			border-radius: 5px
+			border: 2px solid black
+
+		input[type=submit]
+			margin-bottom: 20px
+			width: 50%
+			padding: 10px
+			border-radius: 5px
+			border: 2px solid black
+			background-color: #171717
+			color: aliceblue
+			font-size: 15px
+			cursor: pointer
+
+			&:hover
+				background-color: black
+
+		textarea
+			width: 100%
+			padding: 10px
+			margin-top: 10px
+			border: 2px solid black
+			border-radius: 5px
+			margin-bottom: 20px
+			resize: none
+
+		input[type=text]:focus,textarea:focus 
+			border-color: #171717
+
+		label
+			font-size: 20px
+
+.social
+	text-align: center
+
+	.social-fa
+		font-size: 32px
+		display: inline-block
+		margin: 0 30px
+		width: 60px
+		height: 60px
+		line-height: 60px
+		border-radius: 30px
+		border: 2px solid black
+
+		&:hover
+			cursor: pointer
+			background-color: black
+			color: white
+.map
+	width: 100%
+	height: 400px
+	margin-top: 20px
+
+footer
+	width: 100%
+	height: 70px
+	background-color: #171717
+	color: white
+	text-align: center
+
+	p
+		padding-top: 15px
+		line-height: 20px
+		font-family: Raleway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
