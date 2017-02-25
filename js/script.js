@@ -5,19 +5,16 @@ function myMap() {
     zoom: 10
   }
   var map = new google.maps.Map(mapCanvas, mapOptions);
-};
+}
 
 function myFunction() {
     var x = document.getElementById("topMenu");
+    var y = document.getElementById("topSlogan");
     if (x.className === "menu") {
         x.className += " hamburger";
+        y.style.visibility = "hidden";
     } else {
         x.className = "menu";
+        y.style.visibility = "visible";
     }
-}
-
-function noneSlogan {
-  var y = document.getElementById("topSlogan");
-  if ()
-
 }
