@@ -227,7 +227,7 @@ header, .work {
     padding-top: 40px; }
     @media (max-width: 700px) {
       .specialization .first, .address .first, .address .data {
-        width: 400px;
+        width: 100%;
         height: 200px;
         padding: 0; } }
     .specialization .first .fa, .address .first .fa, .address .data .fa {
@@ -236,14 +236,46 @@ header, .work {
     .specialization .first h3, .address .first h3, .address .data h3 {
       font-size: 22px;
       font-weight: bold; }
-    .specialization .first button, .address .first button, .address .data button {
+    .specialization .first .press, .address .first .press, .address .data .press, .specialization .first .more .close, .address .first .more .close, .address .data .more .close {
       border-radius: 20px;
       width: 100px;
       height: 30px;
       margin: 20px;
       background-color: white;
       border: 2px solid black;
-      font-weight: bold; }
+      font-weight: bold;
+      cursor: pointer; }
+      .specialization .first .press:hover, .address .first .press:hover, .address .data .press:hover, .specialization .first .more .close:hover, .address .first .more .close:hover, .address .data .more .close:hover {
+        background-color: black;
+        color: white;
+        transition: .5s; }
+    .specialization .first .hide, .address .first .hide, .address .data .hide {
+      display: none;
+      max-width: 500px;
+      min-height: 300px; }
+    .specialization .first .more, .address .first .more, .address .data .more {
+      left: 100%;
+      top: -200px;
+      min-width: 300px;
+      padding-top: 20px;
+      background-color: white;
+      border: 2px solid black;
+      position: relative;
+      z-index: 9999999;
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+      border-radius: 6px;
+      overflow: auto; }
+      .specialization .first .more::after, .address .first .more::after, .address .data .more::after {
+        content: '';
+        clear: both;
+        display: block; }
+      .specialization .first .more p, .address .first .more p, .address .data .more p {
+        text-align: justify;
+        margin: 10%;
+        display: block; }
+      @media (max-width: 700px) {
+        .specialization .first .more, .address .first .more, .address .data .more {
+          left: 0; } }
 
 .work {
   height: 400px;
@@ -260,7 +292,7 @@ header, .work {
   height: 100px; }
   @media (max-width: 700px) {
     .address .data {
-      width: 400px;
+      width: 100%;
       height: 200px;
       padding: 0; } }
   .address .data .fa {
@@ -293,7 +325,8 @@ header, .work {
       background-color: #171717;
       color: aliceblue;
       font-size: 15px;
-      cursor: pointer; }
+      cursor: pointer;
+      min-width: 150px; }
       .form .form-control input[type=submit]:hover {
         background-color: black; }
     .form .form-control textarea {
@@ -307,7 +340,8 @@ header, .work {
     .form .form-control input[type=text]:focus, .form .form-control textarea:focus {
       border-color: #171717; }
     .form .form-control label {
-      font-size: 20px; }
+      font-size: 20px;
+      cursor: pointer; }
 
 .social {
   text-align: center; }
