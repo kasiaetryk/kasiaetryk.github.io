@@ -290,6 +290,19 @@ header, .work {
         text-align: justify;
         margin: 10%;
         display: block; }
+    .specialization .first .close, .address .first .close, .address .data .close {
+      border-radius: 20px;
+      width: 100px;
+      height: 30px;
+      margin: 20px;
+      background-color: white;
+      border: 2px solid black;
+      font-weight: bold;
+      cursor: pointer; }
+      .specialization .first .close:hover, .address .first .close:hover, .address .data .close:hover {
+        background-color: black;
+        color: white;
+        transition: .5s; }
 
 .work {
   height: 400px;
