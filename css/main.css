@@ -2,16 +2,33 @@
 * {
   box-sizing: border-box; }
 
+.modal-opened .container .specialization .first .more, .modal-opened .container .address .first .more, .address .modal-opened .container .specialization .data .more, .modal-opened .container .address .data .more {
+  opacity: 1;
+  z-index: 999; }
+
 body {
   width: 100%;
   margin: 0; }
+  body::after {
+    content: "";
+    background: transparent;
+    z-index: -1; }
+
+body.modal-opened::after {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99; }
 
 .container {
   padding-top: 50px;
   font-family: Raleway; }
 
 .row {
-  height: 300px;
+  height: 320px;
   font-family: Raleway; }
   .row h2 {
     font: 38px sans;
@@ -61,7 +78,7 @@ body {
 
 .white h2.background {
   position: relative;
-  z-index: 1; }
+  z-index: 2; }
   .white h2.background:before {
     border-top: 2px solid #171717;
     content: "";
@@ -83,6 +100,13 @@ body {
   @media (max-width: 700px) {
     .white p {
       margin: -5% 5%; } }
+
+.fa-chevron-up {
+  left: 45%;
+  top: 50%;
+  text-decoration: none;
+  font-size: 250%;
+  position: relative; }
 
 header, .work {
   background-image: url(../images/picture1.jpg);
@@ -236,7 +260,7 @@ header, .work {
     .specialization .first h3, .address .first h3, .address .data h3 {
       font-size: 22px;
       font-weight: bold; }
-    .specialization .first .press, .address .first .press, .address .data .press, .specialization .first .more .close, .address .first .more .close, .address .data .more .close {
+    .specialization .first .press, .address .first .press, .address .data .press {
       border-radius: 20px;
       width: 100px;
       height: 30px;
@@ -245,37 +269,27 @@ header, .work {
       border: 2px solid black;
       font-weight: bold;
       cursor: pointer; }
-      .specialization .first .press:hover, .address .first .press:hover, .address .data .press:hover, .specialization .first .more .close:hover, .address .first .more .close:hover, .address .data .more .close:hover {
+      .specialization .first .press:hover, .address .first .press:hover, .address .data .press:hover {
         background-color: black;
         color: white;
         transition: .5s; }
-    .specialization .first .hide, .address .first .hide, .address .data .hide {
-      display: none;
-      max-width: 500px;
-      min-height: 300px; }
     .specialization .first .more, .address .first .more, .address .data .more {
-      left: 100%;
-      top: -200px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
       min-width: 300px;
       padding-top: 20px;
       background-color: white;
       border: 2px solid black;
-      position: relative;
-      z-index: 9999999;
+      z-index: 10;
       box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
       border-radius: 6px;
-      overflow: auto; }
-      .specialization .first .more::after, .address .first .more::after, .address .data .more::after {
-        content: '';
-        clear: both;
-        display: block; }
+      opacity: 0; }
       .specialization .first .more p, .address .first .more p, .address .data .more p {
         text-align: justify;
         margin: 10%;
         display: block; }
-      @media (max-width: 700px) {
-        .specialization .first .more, .address .first .more, .address .data .more {
-          left: 0; } }
 
 .work {
   height: 400px;
